@@ -115,6 +115,36 @@ redis
         配置文件中redistribution
         test下的SpringbootRedisApplicationTests
                 
-                        
+ swagger
+ 
+           <!--生成文档-->
+           <dependency>
+               <groupId>io.springfox</groupId>
+               <artifactId>springfox-swagger2</artifactId>
+               <version>2.6.1</version>
+           </dependency>
+   
+           <dependency>
+               <groupId>io.springfox</groupId>
+               <artifactId>springfox-swagger-ui</artifactId>
+               <version>2.6.1</version>
+           </dependency>
+           
+           
+           在config添加系统配置文件，然后在方法中添加注解，访问http://localhost:8082/swagger-ui.html
+           查看生成的接口文档
+           
+  lombok
+            
+            <!--消除模板代码：getter、setter、构造器、toString()、equals()-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.4</version>
+                <scope>provided</scope>
+            </dependency>         
+                
+            集成pom，在实体类上加上@data注释，可以忽略构造方法，getset方法
+            需要集成lombok plugins 插件，重启idea集合                      
         
         
